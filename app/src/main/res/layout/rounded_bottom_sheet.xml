@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet">
+
+        <ImageView
+            android:id="@+id/handleIv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_handle_24"
+            android:backgroundTint="@color/gray_6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/labelTv"
+            style="@style/large_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="라벨"
+            app:layout_constraintTop_toBottomOf="@+id/handleIv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"/>
+
+        <ImageView
+            android:id="@+id/cancelIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_close_24"
+            android:backgroundTint="@color/gray_6"
+            app:layout_constraintTop_toTopOf="@+id/labelTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/labelTv"
+            app:layout_constraintHorizontal_bias="0.9"/>
+
+        <View
+            android:id="@+id/v"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/line"
+            android:background="@color/gray_4"
+            app:layout_constraintTop_toBottomOf="@+id/labelTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/v"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">영화 검색 앱</string>
+    <string name="movie_fragment">Movie</string>
+    <string name="recent_fragment">Recent</string>
+    <string name="msg_back">뒤로 버튼을 한번 더 누르면 종료됩니다.</string>
+    <string name="search">검색</string>
+    <string name="search_hint">검색어</string>
+    <string name="remove_all">검색기록 삭제</string>
+    <string name="msg_remove_all">정말 모두 삭제하시겠습니까?</string>
+    <string name="yes">예</string>
+    <string name="no">아니오</string>
+    <string name="genre">장르</string>
+    <string name="country">국가</string>
+    <string name="reset">초기화</string>
+</resources>

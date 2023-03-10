@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/MovieFragment">
+
+    <fragment
+        android:id="@+id/MovieFragment"
+        android:name="com.flow.hugh.view.MovieFragment"
+        tools:layout="@layout/fragment_movie" />
+
+    <fragment
+        android:id="@+id/RecentFragment"
+        android:name="com.flow.hugh.view.RecentFragment"
+        tools:layout="@layout/fragment_recent" />
+</navigation>

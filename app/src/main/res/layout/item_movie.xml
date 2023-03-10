@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.flow.hugh.data.Movie" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_ripple">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:src="@mipmap/ic_logo"
+            android:scaleType="fitCenter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/large_text"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="title"
+            app:html_text="@{item.title}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/subTitleTextView"
+            style="@style/small_text"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="sub title"
+            app:html_text="@{item.subtitle}"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/pubDateTextView"
+            style="@style/small_text"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="pubDate"
+            app:html_text="@{item.pubDate}"
+            app:layout_constraintTop_toBottomOf="@+id/subTitleTextView"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/userRatingTextView"
+            style="@style/small_text"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="userRating"
+            app:html_text="@{item.userRating}"
+            app:layout_constraintTop_toBottomOf="@+id/pubDateTextView"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/line"
+            android:background="@color/gray_4"
+            app:layout_constraintTop_toBottomOf="@+id/userRatingTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

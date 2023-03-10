@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_extra_small">4dp</dimen>
+
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_extra_small">4dp</dimen>
+
+    <dimen name="text_size_large">18dp</dimen>
+    <dimen name="text_size_medium">16dp</dimen>
+    <dimen name="text_size_small">14dp</dimen>
+
+    <dimen name="sheet_radius">25dp</dimen>
+    <dimen name="chip_radius">5dp</dimen>
+    <dimen name="line">0.75dp</dimen>
+    <dimen name="zero">0dp</dimen>
+</resources>
